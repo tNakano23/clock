@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>時刻アニメーション</title>
-  <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Archivo Black">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Kosugi+Maru&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="time-container">
-    <span id="digit1" class="digit">0</span>
-    <span id="digit2" class="digit">0</span>
-    <span>:</span>
-    <span id="digit3" class="digit">0</span>
-    <span id="digit4" class="digit">0</span>
+  <div class="button_container">
+    <!-- <button id="toggleDrag">🖕</button> -->
   </div>
+
+
+
+
+  <div class="clock_container_wrapper">
+
+    <div class="hideo" id="hideo">ビデオ３</div>
+    <div class="clock_container_relative">
+
+      <!-- <div class="drasggable" id="draggableElement"> -->
+
+
+
+      <!-- <div class="timer"> -->
+      <div class="circle" id="progress"> </div>
+      <div class="over_circle" id="over_circle"></div>
+      <div class="circle-inner" id="circle-inner"></div>
+      <div class="fade-content knob" id="knob"></div>
+      <p class="fade-content" id="timer_str">
+      <p class="time" id="time"></p>
+      <p class="end-time" id="endTime"></p>
+      <div id="date_type1">&nbsp;2025年2月1日（土）</div>
+
+      <span class="digits">
+        <span id="digit1" class="digit">0</span>
+        <span id="digit2" class="digit">0</span>
+        <span>:</span>
+        <span id="digit3" class="digit">0</span>
+        <span id="digit4" class="digit">0</span>
+      </span>
+      <!-- <p class="end-time" id="endTime">終了32:32</p> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <div class="fade-content toggleBtn" id="toggleLing"></div>
+      <div class="fade-content toggleBtn" id="toggleDate"></div>
+      <div class="fade-content toggleBtn" id="toggleBell"></div>
+    </div>
+  </div>
+
+  <!-- <p class="fade-content">：</p> -->
+  <!-- <div class="hover-target">ホバーするとポインタが四角形に！</div> -->
+
+
+
+
+
+
   <script src="script.js"></script>
 </body>
+
 </html>
