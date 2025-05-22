@@ -25,58 +25,6 @@ setInterval(updateTime, 1000);
 updateTime();
 
 
-
-// const box = document.querySelector('#draggableElement');
-// const toggleButton = document.querySelector('#toggleDrag');
-// let isDragging = false;
-// let offsetX, offsetY;
-// let isDragEnabled = true; // 初期状態でドラッグ有効
-
-// toggleButton.addEventListener('click', () => {
-//     isDragEnabled = !isDragEnabled; // ドラッグの有効/無効を切り替え
-//     if (isDragEnabled) {
-//         box.classList.remove('disabled');
-//         box.style.cursor = "grab";
-//     } else {
-//         box.classList.add('disabled');
-//         box.style.cursor = "not-allowed";
-//     }
-// });
-
-// // ドラッグ開始
-// box.addEventListener('mousedown', (e) => {
-//     if (!isDragEnabled) return; // ドラッグ無効時は何もしない
-//     isDragging = true;
-//     offsetX = e.clientX - box.offsetLeft;
-//     offsetY = e.clientY - box.offsetTop;
-//     box.style.cursor = "grabbing";
-// });
-
-// // ドラッグ中の移動
-// document.addEventListener('mousemove', (e) => {
-//     if (!isDragging || !isDragEnabled) return;
-//     let x = e.clientX - offsetX;
-//     let y = e.clientY - offsetY;
-
-//     // ウィンドウ内で移動制限
-//     const maxX = window.innerWidth - box.offsetWidth;
-//     const maxY = window.innerHeight - box.offsetHeight;
-
-//     x = Math.max(0, Math.min(x, maxX));
-//     y = Math.max(0, Math.min(y, maxY));
-
-//     box.style.left = `${x}px`;
-//     box.style.top = `${y}px`;
-// });
-
-// // ドラッグ終了
-// document.addEventListener('mouseup', () => {
-//     if (!isDragEnabled) return;
-//     isDragging = false;
-//     box.style.cursor = "grab";
-// });
-
-
 const today = new Date();
 
 // 年、月、日を取得
@@ -288,14 +236,12 @@ function startCountdown() {
       console.log("おわり！");
       console.log("is_concetrate", is_concetrate);
 
-      if (is_concetrate == true && Notification.permission === 'granted') {
+      // if (is_concetrate == true && Notification.permission === 'granted') {
         new Notification('タイマーwebアプリ', {
-          body: 'タイマー終了',
+          body: 'タイマーが0になりました⏳️＜🈳',
           icon: 'src/スクリーンショット 2025-02-03 034010.png' // 任意でアイコンを指定
         });
-
-      }
-
+        
     }
   }, 60000);
   // }, 60000);
